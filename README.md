@@ -1,6 +1,6 @@
-# YouTube Sentiment Analyzer
+# YouTube Comments Sentiment Analyzer
 
-A modern web application that analyzes the sentiment of YouTube video comments using AI-powered natural language processing. Built with React frontend and Flask backend.
+A modern web application that analyzes the sentiment of YouTube video comments using natural language processing. Built with React frontend and Flask backend.
 
 ## Features
 
