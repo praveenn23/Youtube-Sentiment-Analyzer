@@ -14,11 +14,8 @@ except LookupError:
 def main():
     print("YouTube Comment Sentiment Analysis\n")
     video_url = input("Enter YouTube video URL: ").strip()
-    api_key = input("Enter your YouTube Data API key: ").strip()
-    try:
-        max_comments = int(input("How many comments to fetch? (default 500): ") or 500)
-    except ValueError:
-        max_comments = 500
+    api_key = "AIzaSyAdy0uk4cYfx8nFMmgOEOk0H01MKfNIU28"  # Replace with your YouTube Data API key
+    max_comments = 500
 
     try:
         comments = get_comments(video_url, api_key, max_comments)
