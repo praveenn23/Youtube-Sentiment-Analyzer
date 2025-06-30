@@ -1,8 +1,7 @@
+flask
+flask-cors
 google-api-python-client
 pandas
 nltk
-scikit-learn
 matplotlib
 seaborn
-tqdm
-requests 

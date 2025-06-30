@@ -1,26 +1,20 @@
+import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-def plot_sentiment_distribution(df, sentiment_col='sentiment'):
-    """
-    Plot the distribution of sentiment labels in the DataFrame.
-    Args:
-        df (pd.DataFrame): DataFrame with sentiment results.
-        sentiment_col (str): Column name for sentiment labels.
-    """
-    plt.figure(figsize=(6,4))
-    sns.countplot(x=sentiment_col, data=df, palette='Set2')
-    plt.title('Sentiment Distribution')
-    plt.xlabel('Sentiment')
-    plt.ylabel('Count')
-    plt.tight_layout()
-    plt.show()
-
 def save_to_csv(df, filename):
-    """
-    Save DataFrame to a CSV file.
-    Args:
-        df (pd.DataFrame): DataFrame to save.
-        filename (str): Output CSV filename.
-    """
-    df.to_csv(filename, index=False) 
+    df.to_csv(filename, index=False)
+
+def plot_sentiment_distribution(df):
+    plt.figure(figsize=(8, 6))
+    sns.countplot(x='sentiment', data=df, palette='viridis')
+    plt.title('Sentiment Distribution of YouTube Comments')
+    plt.xlabel('Sentiment')
+    plt.ylabel('Number of Comments')
+    
+    # Save the plot to a file
+    plot_filename = 'sentiment_distribution.png'
+    plt.savefig(plot_filename)
+    plt.close()
+    
+    return plot_filename 
