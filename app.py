@@ -15,6 +15,10 @@ try:
 except LookupError:
     nltk.download('vader_lexicon')
 
+@app.route('/', methods=['GET'])
+def index():
+    return jsonify({'status': 'ok', 'message': 'API is running'})
+
 @app.route('/api/analyze', methods=['POST'])
 def analyze():
     data = request.get_json()
