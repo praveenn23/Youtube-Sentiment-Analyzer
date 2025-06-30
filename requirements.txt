@@ -5,3 +5,7 @@ pandas
 nltk
 matplotlib
 seaborn
+numpy
+textblob
+youtube-transcript-api
+gunicorn

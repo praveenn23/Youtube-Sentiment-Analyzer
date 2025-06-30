@@ -1,0 +1,122 @@
+/* ResultsDisplay.css - Minimal styling for results page */
+.results-section {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.06);
+  padding: 32px 24px 40px 24px;
+}
+.results-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.summary-cards-row {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+.summary-card {
+  background: #f7f8fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.03);
+  min-width: 180px;
+  max-width: 220px;
+  padding: 18px 12px 14px 12px;
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+.summary-card.main {
+  background: #eaf1ff;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.summary-card-label {
+  color: #555;
+  font-size: 1rem;
+  margin-top: 4px;
+}
+.summary-card-percent {
+  color: #888;
+  font-size: 0.95rem;
+  margin-top: 2px;
+}
+.charts-row {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+.chart-card {
+  background: #f7f8fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.03);
+  min-width: 320px;
+  max-width: 420px;
+  padding: 18px 12px 14px 12px;
+  margin-bottom: 12px;
+  flex: 1 1 320px;
+}
+.chart-container {
+  min-height: 320px;
+}
+.sample-comments-section {
+  margin-top: 32px;
+}
+.comments-table-wrapper {
+  overflow-x: auto;
+}
+.comments-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+.comments-table th, .comments-table td {
+  border: 1px solid #e0e3ea;
+  padding: 8px 10px;
+  text-align: left;
+}
+.sentiment-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 8px;
+  padding: 2px 8px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-right: 4px;
+}
+.sentiment-label {
+  margin-left: 4px;
+  text-transform: capitalize;
+}
+.comment-text-ellipsis {
+  display: inline-block;
+  max-width: 320px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.score-value {
+  font-family: monospace;
+  color: #2563eb;
+}
+@media (max-width: 700px) {
+  .results-section, .chart-card {
+    padding: 12px 2px 18px 2px;
+    max-width: 99vw;
+  }
+  .charts-row, .summary-cards-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .summary-card, .chart-card {
+    max-width: 100%;
+  }
+} 
